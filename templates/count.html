@@ -1,0 +1,10 @@
+<h1>THERE ARE {{ count }} WORDS IN YOUR TEXT</h1>
+<a href="{% url 'home' %}">Start Again</a>
+<h1>Your Text:</h1>
+{{ fulltext }}
+
+<h1>Your Words and their frequency of occurence is:</h1>
+<!--We need to create an HTML for Loop as shown Below:-->
+{% for word, countword in Sortedwords %} {{ word }} - {{countword}}
+<br />
+{% endfor %}
